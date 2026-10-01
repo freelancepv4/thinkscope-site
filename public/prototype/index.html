@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ThinkScope — See the world through AI perspectives</title>
+<meta name="description" content="ThinkScope asks structured questions to multiple AI systems, compares the answers, and tracks predictions against reality.">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta property="og:title" content="ThinkScope — See the world through AI perspectives"><meta property="og:type" content="website"><meta property="og:url" content="https://YOUR-DOMAIN.com/"><meta property="og:site_name" content="ThinkScope"><meta name="theme-color" content="#0a0e1a"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ThinkScope","url":"https://YOUR-DOMAIN.com/","description":"See the world through AI perspectives."}</script>
+<link rel="stylesheet" href="/assets/css/home.css"><script src="/assets/js/home.js" defer></script></head><body>
+<header><div class="w"><nav aria-label="Primary"><a class="logo" href="#top">Think<i>Scope</i></a>
+<div class="l"><a href="#explore">Explore</a><a href="/questions/why-is-the-odyssey-still-relevant/index.html">Odyssey</a><a href="/questions/east-of-eden-relevance/index.html">East of Eden</a><a href="#ai-vs-ai">AI vs AI</a><a href="#disagree">Disagreement</a><a href="#predictions">Predictions</a><a href="#architecture">Architecture</a><a href="#system">Design system</a></div></nav></div></header>
+<main id="top">
+<div class="hero"><div class="w">
+<div><div class="eyebrow">Multiple AI models. One question. Different perspectives.</div>
+<h1>AI thinking, compared.</h1>
+<p>Explore important questions through the reasoning of multiple AI systems, and see where they agree, differ, and surprise you.</p>
+<div class="cta"><a class="btn p" href="/questions/why-is-the-odyssey-still-relevant/index.html">Read the featured question</a><a class="btn g" href="#regions">Explore by region</a></div></div>
+<figure class="hv" id="hvw"><img class="hvp" src="/assets/images/odyssey-video-poster.webp" width="540" height="960" alt="A weathered traveler stands on the deck of a wooden ship looking out to sea at sunrise">
+<video id="hv" playsinline preload="metadata" aria-label="Short atmospheric ThinkScope video: a traveler on a ship at sea"></video>
+<button class="hbp" id="hbp" type="button" aria-label="Play video" hidden>Play</button>
+<div class="hvc"><button id="hpp" type="button" aria-label="Pause video">Pause</button><button id="hsn" type="button" aria-label="Enable sound">Unmute</button></div></figure>
+</div></div>
+
+<section class="dark" id="regions" aria-label="Explore by region"><div class="w rg"><div class="globe"><canvas id="gl" role="img" aria-label="Interactive globe. Select a region below to see a sample ThinkScope topic."></canvas>
+<div class="chips" id="chips" role="group" aria-label="Regions"></div>
+<div class="topic" id="topic" aria-live="polite"></div></div>
+</div></section>
+
+<section class="dark" aria-labelledby="pulse"><div class="w">
+<div class="eyebrow"><span class="dot"></span>ThinkScope pulse</div><h2 id="pulse">What we're analyzing</h2>
+<p class="sub">Structured slots for live data. Values show “—” until connected to the database; nothing here is simulated.</p>
+<div class="stats" data-source="db.metrics (not connected)">
+<div class="stat"><b>—</b><span>Analyses in progress</span></div><div class="stat"><b>—</b><span>AI models compared</span></div><div class="stat"><b>—</b><span>Questions today</span></div><div class="stat"><b>—</b><span>Predictions tracked</span></div></div></div></section>
+
+<section id="explore"><div class="w"><h2>Explore AI perspectives</h2><p class="sub">Ten categories, each a hub in the topic-cluster architecture.</p>
+<div class="grid g5" id="cats"></div></div></section>
+
+<section style="padding-top:0"><div class="w"><h2>Featured perspectives</h2><p class="sub">The first card is a live analysis. The remaining cards are demo placeholders showing the layout, not published analyses.</p>
+<div class="grid g3" id="feat"><a class="card fc" href="/questions/why-is-the-odyssey-still-relevant/index.html"><img src="/assets/images/odyssey-ancient-and-modern.webp" width="1376" height="768" loading="lazy" alt="Marble head and ruined temple on a Mediterranean shore facing a modern town at dusk"><span class="tag">Literature</span> <span class="tag">Culture</span><h3>Why Is the Odyssey Still Relevant?</h3><p>Homecoming, identity and patience: what keeps a nearly 3,000-year-old epic current. AI comparison coming soon.</p><div class="meta">Context and interpretation · Updated Oct 1, 2026</div></a><a class="card fc" href="/questions/east-of-eden-relevance/index.html"><img id="fci" src="/assets/images/east-of-eden-2026-netflix-poster.webp" width="600" height="889" loading="lazy" alt="Official poster for the 2026 Netflix adaptation of East of Eden"><span class="tag">Culture</span> <span class="tag">Books &amp; adaptations</span><h3>Can a 1952 Novel Still Understand Us in 2026?</h3><p>Three AIs analyze why Steinbeck's <i>East of Eden</i> may still matter, with the new Netflix adaptation arriving October 1, 2026.</p><div class="meta">Models: 3 · Interactive analysis · Updated Sep 30, 2026</div></a></div></div></section>
+
+<section id="ai-vs-ai" style="background:color-mix(in srgb,var(--ink) 4%,var(--bg))"><div class="w"><h2>AI vs AI</h2><p class="sub">Same question. Different models. Final outputs and structured summaries only — never hidden reasoning. <span class="tag demo">Layout demo · not real model output</span></p>
+<div class="card"><p class="q">“Is the ending of [Movie] earned?”</p>
+<div class="tabs" role="tablist" id="tabs"></div><div id="panel" role="tabpanel" aria-live="polite"></div>
+<div class="two" style="margin-top:14px"><div><b>Agreement</b><ul class="ag"><li>[Shared conclusion slot]</li></ul></div><div><b>Consensus &amp; notable differences</b><ul class="dg"><li>[Computed from structured tags, not hand-written]</li></ul></div></div></div></div></section>
+
+<section id="disagree"><div class="w"><h2>Where AI disagrees</h2><p class="sub">Models as nodes; solid lines mean shared conclusions, dashed lines mean disputed ones. <span class="tag demo">Demo structure</span></p>
+<div class="card"><svg viewBox="0 0 640 220" width="100%" role="img" aria-label="Diagram: three models connect to one shared conclusion and one disputed conclusion">
+<g font-family="system-ui" font-size="13" fill="currentColor"><text x="20" y="40">GPT</text><text x="20" y="115">Claude</text><text x="20" y="190">Gemini</text>
+<g stroke="#2fb8e6" stroke-width="2"><line x1="70" y1="36" x2="430" y2="60"/><line x1="70" y1="111" x2="430" y2="60"/><line x1="70" y1="186" x2="430" y2="60"/></g>
+<g stroke="#d1495b" stroke-width="2" stroke-dasharray="6 5"><line x1="70" y1="36" x2="430" y2="165"/><line x1="70" y1="186" x2="430" y2="165"/></g>
+<circle cx="430" cy="60" r="9" fill="#2e9e6b"/><text x="450" y="64">Shared conclusion</text><circle cx="430" cy="165" r="9" fill="#e8a64a"/><text x="450" y="169">Disputed conclusion</text>
+<circle cx="60" cy="36" r="6" fill="#7b6cf0"/><circle cx="60" cy="111" r="6" fill="#7b6cf0"/><circle cx="60" cy="186" r="6" fill="#7b6cf0"/></g></svg>
+<div class="two"><div><b>Agrees on</b><ul class="ag"><li>[point]</li></ul></div><div><b>Disagrees on</b><ul class="dg"><li>[point]</li></ul></div></div></div></div></section>
+
+<section id="predictions" class="dark"><div class="w"><h2>AI predictions &amp; track record</h2><p class="sub">Every record keeps prediction date, event date, model, assumptions and outcome. No model ranking until methodology and sample size justify one.</p>
+<div class="ty"><div style="border-color:#252d44"><b style="color:#2fb8e6">FACT</b>Sourced data</div><div style="border-color:#252d44"><b style="color:#7b6cf0">AI ANALYSIS</b>Model output</div><div style="border-color:#252d44"><b style="color:#e8a64a">PREDICTION</b>Dated, uncertain</div><div style="border-color:#252d44"><b style="color:#2e9e6b">RESULT</b>Verified outcome</div></div>
+<div class="scroll" style="margin-top:18px"><table style="color:var(--nink)"><tr><th>Model</th><th>Category</th><th>Prediction</th><th>Date</th><th>Status</th></tr>
+<tr><td colspan="5" style="color:#9aa3b8">Empty state: no predictions recorded yet. Not gambling advice.</td></tr></table></div></div></section>
+
+<section id="ask"><div class="w"><h2>Ask ThinkScope</h2><p class="sub">Interface only in v1. No API is connected; submissions are not sent anywhere.</p>
+<form id="askF"><select aria-label="Type"><option>Movie</option><option>TV show</option><option>Sport</option><option>Music</option><option>Game</option><option>Culture</option></select><input aria-label="Subject" placeholder="e.g. a title, team or topic"><button class="btn p">What does AI think?</button></form><p class="sub" style="margin-top:10px" aria-live="polite" id="askM"></p></div></section>
+
+<section id="architecture" style="background:color-mix(in srgb,var(--ink) 4%,var(--bg))"><div class="w"><h2>Architecture</h2><p class="sub">Structured entities first, pages second — so search, internal links and schema are generated from data.</p>
+<div class="grid g3"><div class="card"><h3>URLs</h3><p><code>/movies/[slug]</code> <code>/tv/[slug]</code> <code>/sports/[event]</code> <code>/experiments/[slug]</code> <code>/predictions/[slug]</code> <code>/ai-vs-ai/</code> <code>/ai-vs-humans/</code> <code>/countries/[c]</code> <code>/questions/[slug]</code> <code>/models/[m]</code> <code>/methodology/</code> <code>/about/</code> <code>/editorial-policy/</code> <code>/search/</code>. Locale prefix (<code>/es/…</code>) reserved, inactive, hreflang-ready.</p></div>
+<div class="card"><h3>Content models</h3><p>Article, Movie, TVShow, Sport, Team, Player, Music, Game, Country, Question, Experiment, Prediction, AIModel, Analysis, Source, Result. Each has id, slug, locale, status, sources[], updatedAt, isDemo.</p></div>
+<div class="card"><h3>Graph relations</h3><p>Movie → Country, Language, Genre, Analyses[], Questions[], AudienceData[], CriticData[], Experiments[], Predictions[]. Third-party data needs a Source record before display.</p></div>
+<div class="card"><h3>Templates</h3><p>Movie, TV/Drama, Sport, Experiment, Article — built on shared blocks: Consensus, Agree/Disagree, VsHumans, Sources, Related, Ask.</p></div>
+<div class="card"><h3>Stack</h3><p>Next.js + TypeScript + Tailwind, server-rendered, JSON-LD per page type, sitemap/robots, lazy-loaded globe. Content layer swappable for Supabase/Postgres/CMS.</p></div>
+<div class="card"><h3>Trust</h3><p>Independent, unaffiliated with model vendors or studios. “Thinks” is brand shorthand: outputs are generated analyses, not consciousness or opinion.</p></div></div></div></section>
+
+<section id="system"><div class="w"><h2>Design system</h2><p class="sub">Soft-dark / off-white hybrid. Serif editorial headings, system sans UI.</p>
+<div class="sw"><i style="background:#0a0e1a;color:#fff">night</i><i style="background:#f6f4ef">paper</i><i style="background:#2fb8e6">cyan</i><i style="background:#7b6cf0;color:#fff">violet</i><i style="background:#e8a64a">warm</i><i style="background:#2e9e6b;color:#fff">ok</i><i style="background:#d1495b;color:#fff">error</i></div>
+<div class="cta" style="margin:0"><span class="btn p">Primary</span><span class="btn" style="border-color:var(--line)">Secondary</span><span class="tag">Badge</span><span class="tag demo">Demo</span></div>
+<p class="sub" style="margin-top:14px">Motion 150–500ms, disabled under reduced-motion. Radius 14px, one shadow level, 1px borders. Mobile nav scrolls horizontally; bottom bar planned for the Next.js build.</p></div></section>
+
+<section style="padding-top:0"><div class="w"><div class="card"><h2 style="font-size:26px">The AI Perspective</h2><p class="sub">Interesting questions. Unexpected AI answers. Delivered occasionally.</p>
+<form id="nlF"><input type="email" aria-label="Email" placeholder="Email" required><select aria-label="Language"><option>English</option></select><select aria-label="Topics"><option>All topics</option><option>Movies</option><option>Sports</option><option>Predictions</option></select><button class="btn p">Subscribe</button></form><p class="meta" aria-live="polite" id="nlM"></p></div></div></section>
+</main>
+<footer><div class="w"><div class="cols">
+<div><h4>Explore</h4><a href="#">Movies</a><a href="#">TV &amp; Drama</a><a href="#">Sports</a><a href="#">Music</a><a href="#">Games</a><a href="#">Culture</a></div>
+<div><h4>Research</h4><a href="#">AI Experiments</a><a href="#">Predictions</a><a href="#">AI vs Humans</a></div>
+<div><h4>Company</h4><a href="#">About</a><a href="#">Methodology</a><a href="#">Editorial Policy</a><a href="#">Contact</a><a href="#">Corrections</a></div>
+<div><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+<div><h4>Preferences</h4><select aria-label="Language"><option>English</option></select> <button id="themeB" class="tag" style="background:none;color:inherit">Toggle theme</button></div></div>
+<p style="margin-top:28px">© ThinkScope. Independent platform; not affiliated with any AI company, studio or streaming service. See the world through AI perspectives.</p></div></footer>
+</body></html>
