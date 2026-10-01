@@ -15,7 +15,7 @@ export interface Question {
 
 export const QUESTIONS: Question[] = [
   {
-    title: "Why Is the Odyssey Still Relevant?",
+    title: "What Does AI Think Makes The Odyssey Still Relevant?",
     href: "/questions/why-is-the-odyssey-still-relevant/",
     categories: ["Literature", "Culture"],
     blurb: "Homecoming, identity and patience: what keeps a nearly 3,000-year-old epic current. AI comparison coming soon.",

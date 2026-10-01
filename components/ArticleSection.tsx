@@ -3,12 +3,12 @@ import Image from "next/image";
 import { useRef, type ReactNode } from "react";
 import type { Img } from "@/lib/data";
 
-interface Props { id: string; tag: "Context" | "Interpretation"; heading: string; image?: Img; caption?: string; children?: ReactNode; more?: string }
+interface Props { id: string; tag: "Fact" | "Context" | "Interpretation"; lenses?: string; heading: string; image?: Img; caption?: string; children?: ReactNode; more?: string }
 
-export default function ArticleSection({ id, tag, heading, image, caption, children, more }: Props) {
+export default function ArticleSection({ id, tag, heading, image, caption, children, more, lenses }: Props) {
   const dlg = useRef<HTMLDialogElement>(null);
   return (
-    <section id={id} className="as" aria-labelledby={`${id}-h`}>
+    <section id={id} className="as" data-lenses={lenses} aria-labelledby={`${id}-h`}>
       <span className="tag">{tag}</span><h2 id={`${id}-h`}>{heading}</h2>
       {image && (
         <figure className="qf">
