@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import JsonLd from "@/components/JsonLd";
 import { siteJsonLd } from "@/lib/seo";
 import { DEFAULT_LOCALE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <li><Link href="/privacy">Privacy Policy</Link></li><li><Link href="/cookies">Cookie Policy</Link></li><li><Link href="/terms">Terms of Use</Link></li>
           </ul>
           © ThinkScope. Independent platform; not affiliated with any AI company, studio or streaming service. AI outputs are perspectives, not objective truth.</div></footer>
+        <Analytics />
       </body>
     </html>
   );
