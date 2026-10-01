@@ -2,9 +2,10 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://YOUR-DOMAIN
 
 // Media map: change paths here to swap assets.
 export const MEDIA = {
-  heroVideo: "/assets/video/odyssey-hero.mp4",
-  heroPoster: "/assets/images/odyssey-video-poster.webp",
-  heroPosterAlt: "A weathered traveler stands on the deck of a wooden ship looking out to sea at sunrise",
+  home: { video: "/assets/video/thinkscope-hero.mp4", poster: "/assets/images/thinkscope-hero-poster.webp", w: 1376, h: 768,
+    alt: "A dark desk with old books, notes and a floating panel of translucent screens, beside the word ThinkScope", label: "ThinkScope introduction: an open book gains AI annotations" },
+  odyssey: { video: "/assets/video/odyssey-hero.mp4", poster: "/assets/images/odyssey-video-poster.webp", w: 540, h: 960,
+    alt: "A weathered traveler stands on the deck of a wooden ship looking out to sea at sunrise", label: "The Odyssey: a traveler on a ship at sea" },
 } as const;
 
 export interface Img { src: string; w: number; h: number; alt: string }
