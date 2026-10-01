@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import FeaturedQuestion from "@/components/FeaturedQuestion";
 import Globe from "@/components/Globe";
 import QuestionCard from "@/components/QuestionCard";
 import VideoPlayer from "@/components/VideoPlayer";
 import { MEDIA, QUESTIONS, TOPICS } from "@/lib/data";
+import { pageMetadata } from "@/lib/seo";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  ...pageMetadata({ title: SITE_TITLE, description: SITE_DESCRIPTION, path: "/", image: { src: "/assets/images/og-home.jpg", w: 1200, h: 630, alt: "ThinkScope: an open book, old notes and floating panels of AI analysis on a dark desk" } }),
+  title: { absolute: SITE_TITLE },
+};
 
 export default function Home() {
   const m = MEDIA.home;
@@ -16,7 +24,7 @@ export default function Home() {
           <h1>AI thinking, compared.</h1>
           <p>Explore important questions through the reasoning of multiple AI systems, and see where they agree, differ, and surprise you.</p>
           <div className="cta">
-            <Link className="btn p" href="/questions/why-is-the-odyssey-still-relevant/">Read the featured question</Link>
+            <Link className="btn p" href="/questions/why-is-the-odyssey-still-relevant">Read the featured question</Link>
             <a className="btn g" href="#global">See the global view</a>
           </div>
         </div>
@@ -25,7 +33,7 @@ export default function Home() {
 
       <section aria-labelledby="what"><div className="w">
         <h2 id="what">What is ThinkScope?</h2>
-        <p className="sub">ThinkScope puts one question to several AI systems and lays their answers side by side: where they agree, where they differ, and what that suggests. AI responses are perspectives, not objective truth.</p>
+        <p className="sub">ThinkScope puts one question to several AI systems and lays their answers side by side: where they agree, where they differ, and what that suggests. AI responses are perspectives, not objective truth. <Link href="/methodology">How the comparison works</Link> · <Link href="/about">About ThinkScope</Link></p>
       </div></section>
 
       <section id="global" className="dark" aria-labelledby="gt"><div className="w gw">

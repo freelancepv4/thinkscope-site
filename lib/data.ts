@@ -1,4 +1,4 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://YOUR-DOMAIN.com";
+export { SITE_URL } from "./site";
 
 // Media map: change paths here to swap assets.
 export const MEDIA = {
@@ -16,7 +16,7 @@ export interface Question {
 export const QUESTIONS: Question[] = [
   {
     title: "What Does AI Think Makes The Odyssey Still Relevant?",
-    href: "/questions/why-is-the-odyssey-still-relevant/",
+    href: "/questions/why-is-the-odyssey-still-relevant",
     categories: ["Literature", "Culture"],
     blurb: "Homecoming, identity and patience: what keeps a nearly 3,000-year-old epic current. AI comparison coming soon.",
     meta: "Context and interpretation · Updated Oct 1, 2026",
@@ -24,7 +24,7 @@ export const QUESTIONS: Question[] = [
   },
   {
     title: "Can a 1952 Novel Still Understand Us in 2026?",
-    href: "/questions/east-of-eden-relevance/index.html",
+    href: "/questions/east-of-eden-relevance",
     categories: ["Culture", "Books & adaptations"],
     blurb: "Three AIs analyze why Steinbeck's East of Eden may still matter, with the Netflix adaptation arriving October 1, 2026.",
     meta: "Models: 3 · Interactive analysis · Updated Sep 30, 2026",

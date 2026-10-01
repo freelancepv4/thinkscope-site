@@ -124,3 +124,11 @@ article[data-lens] .as:not([data-lenses~="x"]){transition:opacity .3s}
 article[data-lens=psychology] .as[data-lenses]:not([data-lenses~=psychology]),article[data-lens=relationships] .as[data-lenses]:not([data-lenses~=relationships]),article[data-lens=identity] .as[data-lenses]:not([data-lenses~=identity]),article[data-lens=homecoming] .as[data-lenses]:not([data-lenses~=homecoming]){opacity:.35}
 article[data-lens] .as[data-lenses~=psychology],article[data-lens=psychology] .as[data-lenses~=psychology]{outline:0}
 .qh h1 i{font-style:italic}.qh h1{max-width:22ch;font-size:clamp(28px,5vw,46px)}
+
+/* v5: tighter article rhythm, hero background, breadcrumbs, prose */
+.qb section:not(.qa){padding:0;margin:24px 0}.qb .qa{margin:24px 0}.qb h2{margin:6px 0 8px}.qb p{margin:0 0 12px}.qb .qf{margin:10px 0 12px}.qb .te{margin:10px 0}.qb .mo{margin:8px 0 0}.qb #ideas>section{margin:24px 0}
+.qh{position:relative;isolation:isolate;overflow:hidden}.qhbg{object-fit:cover;z-index:-2}.qhs{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,14,26,.9) 0%,rgba(10,14,26,.62) 55%,rgba(10,14,26,.35) 100%)}
+@media(max-width:800px){.qhs{background:rgba(10,14,26,.72)}}
+.bc{font:13px var(--s);margin:0 0 14px}.bc ol{list-style:none;display:flex;flex-wrap:wrap;gap:4px;padding:0;margin:0}.bc a{color:#aab3c8}.bc a:hover{color:#fff}.bc [aria-current]{color:#fff}.bc li{color:#aab3c8}
+.prose h2{margin-top:28px}.prose ul{padding-left:20px;font:400 18px/1.7 var(--f);max-width:65ch}.prose a{color:var(--ink)}.todo{background:rgba(232,166,74,.18);border-left:3px solid #e8a64a;padding:2px 8px}
+.ft{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 12px;padding:0;list-style:none}.ft a{color:inherit}

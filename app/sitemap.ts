@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/data";
+import { QUESTION_PAGES } from "@/lib/questions";
+import { abs } from "@/lib/site";
 
+// Only canonical, indexable pages. Legal pages are noindex and left out. New questions appear automatically.
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ["/", "/questions/why-is-the-odyssey-still-relevant/", "/questions/east-of-eden-relevance/index.html"]
-    .map((p) => ({ url: SITE_URL + p, lastModified: new Date("2026-10-01") }));
+  const questions = QUESTION_PAGES.map((q) => ({ url: abs(q.path), ...(q.modifiedDate ? { lastModified: q.modifiedDate } : {}) }));
+  return [{ url: abs("/") }, ...questions, { url: abs("/methodology") }, { url: abs("/about") }, { url: abs("/contact") }];
 }

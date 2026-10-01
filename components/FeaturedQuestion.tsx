@@ -2,7 +2,7 @@ import Link from "next/link";
 import VideoPlayer from "@/components/VideoPlayer";
 import { MEDIA } from "@/lib/data";
 
-const PATH = "/questions/why-is-the-odyssey-still-relevant/";
+const PATH = "/questions/why-is-the-odyssey-still-relevant";
 
 export default function FeaturedQuestion() {
   const m = MEDIA.odyssey;

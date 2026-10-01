@@ -1,26 +1,19 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import AIComparison from "@/components/AIComparison";
 import ArticleSection from "@/components/ArticleSection";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import Image from "next/image";
+import JsonLd from "@/components/JsonLd";
 import LensSelector from "@/components/LensSelector";
+import Link from "next/link";
 import LiteraryJourney from "@/components/LiteraryJourney";
 import SectionNav from "@/components/SectionNav";
 import ThemeExplorer from "@/components/ThemeExplorer";
 import VideoPlayer from "@/components/VideoPlayer";
+import { MEDIA, type Img } from "@/lib/data";
 import { REFLECTIONS } from "@/lib/odyssey";
-import { MEDIA, SITE_URL, type Img } from "@/lib/data";
+import { QUESTION_PAGES, questionJsonLd, questionMetadata } from "@/lib/questions";
 
-const PATH = "/questions/why-is-the-odyssey-still-relevant/";
-const TITLE = "What Makes The Odyssey Still Relevant?";
-const DESC = "ThinkScope compares how different AI systems reason about why Homer's Odyssey still resonates today, from homecoming and identity to relationships, temptation and human nature.";
-
-export const metadata: Metadata = {
-  title: TITLE, description: DESC, alternates: { canonical: PATH },
-  openGraph: { title: `${TITLE} | ThinkScope`, description: DESC, url: PATH, type: "article",
-    images: [{ url: "/assets/images/og-odyssey.jpg", width: 1200, height: 630, alt: "Marble head and ruined temple on a Mediterranean shore facing a modern town at dusk" }] },
-  twitter: { card: "summary_large_image" },
-};
+export const metadata = questionMetadata(QUESTION_PAGES[0]);
 
 const NAV = [{ id: "overview", label: "Overview" }, { id: "themes", label: "Themes" }, { id: "journey", label: "Journey" }, { id: "ideas", label: "Ideas" }, { id: "ai", label: "AI comparison" }, { id: "agree", label: "Agreement" }, { id: "differ", label: "Differences" }, { id: "synth", label: "ThinkScope" }, { id: "explore", label: "Explore" }];
 const img = (f: string, w: number, h: number, alt: string): Img => ({ src: `/assets/images/${f}`, w, h, alt });
@@ -43,11 +36,15 @@ function Pending({ id, title, children }: { id: string; title: string; children:
 
 export default function OdysseyPage() {
   const m = MEDIA.odyssey;
-  const jsonLd = { "@context": "https://schema.org", "@type": "Article", headline: TITLE, image: `${SITE_URL}/assets/images/og-odyssey.jpg`, author: { "@type": "Organization", name: "ThinkScope" }, mainEntityOfPage: SITE_URL + PATH };
+  const q = QUESTION_PAGES[0];
   return (
     <main><article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="qh" id="overview"><div className="w oh">
+      <JsonLd data={questionJsonLd(q)} />
+      <div className="qh" id="overview">
+        <Image className="qhbg" src={IMG.ithaca.src} alt="" fill priority sizes="100vw" />
+        <div className="qhs" aria-hidden="true" />
+        <div className="w"><Breadcrumbs items={[{ name: "ThinkScope", href: "/" }, { name: "Questions", href: "/#questions" }, { name: "Literature" }, { name: "The Odyssey" }]} /></div>
+        <div className="w oh">
         <div>
           <div className="eyebrow">Literature · Culture</div>
           <h1>What does AI think makes <i>The Odyssey</i> still relevant to audiences today?</h1>
@@ -81,6 +78,7 @@ export default function OdysseyPage() {
           <span className="tag">AI analysis</span><h2 id="ai-h">Three AI systems. One question.</h2>
           <p>Each system is given the same question and its answer is shown as written. No ranking, no scores.</p>
           <AIComparison />
+          <p className="meta">How ThinkScope compares AI responses: <Link href="/methodology">AI &amp; Methodology</Link>.</p>
         </section>
         <Pending id="agree" title="Where the AI responses converge">This map of shared themes is built only from the published responses, so it appears once they are added.</Pending>
         <Pending id="differ" title="Where the AI responses diverge">Differences are shown only where the published responses actually differ, so this section appears once they are added.</Pending>
@@ -92,7 +90,8 @@ export default function OdysseyPage() {
         <figure className="qf"><Image src={IMG.end.src} width={IMG.end.w} height={IMG.end.h} alt={IMG.end.alt} sizes="(max-width: 800px) 100vw, 760px" loading="lazy" /><figcaption>Illustrative image, not a historical depiction.</figcaption></figure>
         <section aria-labelledby="end-h"><h2 id="end-h">One ancient story. Many interpretations.</h2>
           <p className="lede">The value of comparing AI responses isn&apos;t finding one &ldquo;correct&rdquo; answer. It&apos;s seeing how different systems frame the same question, and deciding what those differences make us notice.</p>
-          <p className="cta"><a className="btn p" href="/questions/east-of-eden-relevance/index.html">Explore another question →</a><Link className="btn g" href="/#questions">Explore all questions →</Link></p></section>
+          <p className="meta">Related: <Link href="/questions/east-of-eden-relevance">Is East of Eden still relevant in 2026?</Link>, another literary question compared across AI systems.</p>
+          <p className="cta"><a className="btn p" href="/questions/east-of-eden-relevance">Explore another question →</a><Link className="btn g" href="/#questions">Explore all questions →</Link></p></section>
       </div>
     </article></main>
   );
