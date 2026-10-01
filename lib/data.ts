@@ -10,7 +10,7 @@ export const MEDIA = {
 
 export interface Img { src: string; w: number; h: number; alt: string }
 export interface Question {
-  title: string; href: string; categories: string[]; blurb: string; meta: string; image: Img;
+  title: string; href: string; categories: string[]; blurb: string; meta: string; image: Img; chips?: string[]; cta?: string;
 }
 
 export const QUESTIONS: Question[] = [
@@ -27,7 +27,7 @@ export const QUESTIONS: Question[] = [
     href: "/questions/east-of-eden-relevance",
     categories: ["Culture", "Books & adaptations"],
     blurb: "Three AIs analyze why Steinbeck's East of Eden may still matter, with the Netflix adaptation arriving October 1, 2026.",
-    meta: "Models: 3 · Interactive analysis · Updated Sep 30, 2026",
+    meta: "Updated Sep 30, 2026", chips: ["3 AI perspectives", "Interactive analysis"], cta: "Read the comparison",
     image: { src: "/assets/images/east-of-eden-2026-netflix-poster.webp", w: 600, h: 889, alt: "Official poster for the 2026 Netflix adaptation of East of Eden" },
   },
 ];

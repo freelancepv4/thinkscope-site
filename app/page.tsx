@@ -45,7 +45,7 @@ export default function Home() {
       <section id="questions" aria-labelledby="qh"><div className="w">
         <h2 id="qh">Questions worth thinking about</h2>
         <FeaturedQuestion />
-        <div className="grid g3">{others.map((q) => <QuestionCard key={q.href} q={q} />)}</div>
+        <div className="qcw">{others.map((q) => <QuestionCard key={q.href} q={q} />)}</div>
       </div></section>
 
       <section id="topics" aria-labelledby="th"><div className="w">

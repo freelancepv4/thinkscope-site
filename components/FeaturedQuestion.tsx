@@ -1,23 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
 import VideoPlayer from "@/components/VideoPlayer";
 import { MEDIA } from "@/lib/data";
 
 const PATH = "/questions/why-is-the-odyssey-still-relevant";
+const CHIPS = [{ t: "6-stage journey", h: "#journey" }, { t: "4 ideas to explore", h: "#ideas" }, { t: "Themes explorer", h: "#themes" }];
 
 export default function FeaturedQuestion() {
   const m = MEDIA.odyssey;
   return (
     <article className="fq">
+      <Image className="fqbg" src="/assets/images/odyssey-ithaca.webp" alt="" fill sizes="100vw" loading="lazy" />
+      <span className="fqsh" aria-hidden="true" />
       <div className="fqt">
         <div className="eyebrow">Featured question · Literature · Culture</div>
         <h3><Link href={PATH}>What does AI think makes The Odyssey still relevant?</Link></h3>
         <p>An epic composed roughly 2,700 years ago is still taught, retold and adapted. What keeps it current?</p>
-        <p className="meta">Context and interpretation published. AI comparison coming soon.</p>
+        <div className="chp">{CHIPS.map((c) => <Link key={c.t} href={`${PATH}${c.h}`}>{c.t}</Link>)}</div>
         <div className="fql">
-          <Link href={PATH}>Explore comparison →</Link>
-          <Link href={`${PATH}#ai`}>See the perspectives →</Link>
-          <Link href={`${PATH}#t1`}>Why this matters →</Link>
+          <Link href={PATH}>Explore comparison <span aria-hidden="true">→</span></Link>
+          <Link href={`${PATH}#ai`}>See the perspectives <span aria-hidden="true">→</span></Link>
         </div>
+        <p className="meta">Context and interpretation published. AI comparison coming soon.</p>
       </div>
       <VideoPlayer src={m.video} poster={m.poster} posterW={m.w} posterH={m.h} alt={m.alt} label={m.label} ratio="9/16" mode="inview" />
     </article>
