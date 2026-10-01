@@ -44,8 +44,8 @@ export default function VideoHero() {
   return (
     <figure className={`hv${failed ? " nov" : ""}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="hvp" src={MEDIA.heroPoster} width={540} height={960} alt={MEDIA.heroPosterAlt} />
-      <video ref={ref} src={MEDIA.heroVideo} poster={MEDIA.heroPoster} playsInline preload="metadata"
+      <img className="hvp" src={MEDIA.odyssey.poster} width={540} height={960} alt={MEDIA.odyssey.alt} />
+      <video ref={ref} src={MEDIA.odyssey.video} poster={MEDIA.odyssey.poster} playsInline preload="metadata"
         aria-label="Short atmospheric ThinkScope video: a traveler on a ship at sea" onError={() => setFailed(true)} />
       {paused && !started && !failed && (
         <button className="hbp" type="button" onClick={bigPlay} aria-label="Play video">Play</button>
