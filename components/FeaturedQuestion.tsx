@@ -4,7 +4,7 @@ import VideoPlayer from "@/components/VideoPlayer";
 import { MEDIA } from "@/lib/data";
 
 const PATH = "/questions/why-is-the-odyssey-still-relevant";
-const CHIPS = [{ t: "6-stage journey", h: "#journey" }, { t: "4 ideas to explore", h: "#ideas" }, { t: "Themes explorer", h: "#themes" }];
+const CHIPS = [{ t: "3 AI perspectives", h: "#ai" }, { t: "Evidence test", h: "#evidence" }, { t: "Relevance map", h: "#map" }, { t: "6-stage journey", h: "#journey" }];
 
 export default function FeaturedQuestion() {
   const m = MEDIA.odyssey;
@@ -21,7 +21,7 @@ export default function FeaturedQuestion() {
           <Link href={PATH}>Explore comparison <span aria-hidden="true">→</span></Link>
           <Link href={`${PATH}#ai`}>See the perspectives <span aria-hidden="true">→</span></Link>
         </div>
-        <p className="meta">Context and interpretation published. AI comparison coming soon.</p>
+        <p className="meta">Gemini, ChatGPT and Claude compared · Updated Oct 2, 2026</p>
       </div>
       <VideoPlayer src={m.video} poster={m.poster} posterW={m.w} posterH={m.h} alt={m.alt} label={m.label} ratio="9/16" mode="inview" />
     </article>

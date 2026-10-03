@@ -12,13 +12,13 @@ export interface QuestionSEO {
 export const QUESTION_PAGES: QuestionSEO[] = [
   {
     slug: "why-is-the-odyssey-still-relevant", path: "/questions/why-is-the-odyssey-still-relevant",
-    seoTitle: "What Makes The Odyssey Still Relevant?",
+    seoTitle: "The Odyssey: Why Is It Still Relevant?",
     headline: "What does AI think makes The Odyssey still relevant to audiences today?",
-    description: "Why does Homer's Odyssey still matter? ThinkScope explores its themes of homecoming, identity, loyalty and temptation, and is preparing a comparison of how different AI systems interpret them.",
+    description: "Three AIs analyze why Homer's The Odyssey still matters today \u2014 from homecoming and identity to hospitality, mortality, storytelling and modern adaptations.",
     category: "Literature", topics: ["Literature", "Culture", "Human nature"],
     heroImage: { src: "/assets/images/odyssey-video-poster.webp", w: 540, h: 960, alt: "A weathered traveler stands on the deck of a wooden ship looking out to sea at sunrise" },
     ogImage: { src: "/assets/images/og-odyssey.jpg", w: 1200, h: 630, alt: "Marble head and ruined temple on a Mediterranean shore facing a modern town at dusk" },
-    related: ["east-of-eden-relevance"],
+    related: ["east-of-eden-relevance"], modifiedDate: "2026-10-02",
   },
   {
     slug: "east-of-eden-relevance", path: "/questions/east-of-eden-relevance",

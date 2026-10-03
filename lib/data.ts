@@ -18,8 +18,8 @@ export const QUESTIONS: Question[] = [
     title: "What Does AI Think Makes The Odyssey Still Relevant?",
     href: "/questions/why-is-the-odyssey-still-relevant",
     categories: ["Literature", "Culture"],
-    blurb: "Homecoming, identity and patience: what keeps a nearly 3,000-year-old epic current. AI comparison coming soon.",
-    meta: "Context and interpretation · Updated Oct 1, 2026",
+    blurb: "Three AIs compare why Homer's epic still matters, from homecoming and identity to hospitality and mortality. Is it timeless, or just endlessly renewable?",
+    meta: "Updated Oct 2, 2026", chips: ["3 AI perspectives", "Interactive analysis"], cta: "Read the comparison",
     image: { src: "/assets/images/odyssey-ancient-and-modern.webp", w: 1376, h: 768, alt: "Marble head and ruined temple on a Mediterranean shore facing a modern town at dusk" },
   },
   {
